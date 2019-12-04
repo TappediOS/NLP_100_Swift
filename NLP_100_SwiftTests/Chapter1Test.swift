@@ -12,15 +12,15 @@ import XCTest
 class Chapter1Test: XCTestCase {
    
    func testQ0() {
-      XCTAssertEqual(Chapter1().Q0("stressed"), "dessert")
+      XCTAssertEqual(Chapter1().Q0("stressed"), "desserts")
    }
    
    func testQ1() {
-      
+      XCTAssertEqual(Chapter1().Q1("パタトクカシーー"), "タクシー")
    }
    
    func testQ2() {
-      
+      XCTAssertEqual(Chapter1().Q2("パトカー", "タクシー"), "パタトクカシーー")
    }
    
    func testQ3() {

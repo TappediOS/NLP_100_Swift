@@ -7,25 +7,32 @@
 //
 
 import Foundation
+import Cocoa
 
 struct Chapter1 {
    
    //00. 文字列の逆順
    //文字列"stressed"の文字を逆に（末尾から先頭に向かって）並べた文字列を得よ．
    func Q0(_ input: String) -> String {
-      return "2"
+      return String(input.reversed())
    }
    
    //01. 「パタトクカシーー」
    //「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ．
-   func Q1() {
-      
+   func Q1(_ input: String) -> String {
+      var retStr = ""
+      for tmp in 0 ... input.count {
+         if tmp % 2 == 1 { retStr += input[input.index(input.startIndex, offsetBy: tmp)..<input.index(input.startIndex, offsetBy: tmp + 1)] }
+      }
+      return retStr
    }
    
    //02. 「パトカー」＋「タクシー」＝「パタトクカシーー」
    //「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．
-   func Q2() {
-      
+   func Q2(_ input1: String, _ input2: String) -> String {
+      return zip(input1, input2)
+      .map { String($0) + String($1) }
+      .reduce("", +)
    }
    
    //03. 円周率

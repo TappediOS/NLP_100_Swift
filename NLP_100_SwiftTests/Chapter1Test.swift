@@ -11,7 +11,43 @@ import XCTest
 
 class Chapter1Test: XCTestCase {
    
+   func testQ0() {
+      XCTAssertEqual(Chapter1().Q0("stressed"), "dessert")
+   }
+   
    func testQ1() {
+      
+   }
+   
+   func testQ2() {
+      
+   }
+   
+   func testQ3() {
+      
+   }
+   
+   func testQ4() {
+      
+   }
+   
+   func testQ5() {
+      
+   }
+   
+   func testQ6() {
+      
+   }
+   
+   func testQ7() {
+      
+   }
+   
+   func testQ8() {
+      
+   }
+   
+   func testQ9() {
       
    }
 }

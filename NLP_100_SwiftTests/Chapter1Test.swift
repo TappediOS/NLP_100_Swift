@@ -24,7 +24,7 @@ class Chapter1Test: XCTestCase {
    }
    
    func testQ3() {
-      
+      XCTAssertEqual(Chapter1().Q3("Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."), [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9])
    }
    
    func testQ4() {

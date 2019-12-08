@@ -71,27 +71,55 @@ struct Chapter2 {
    
    /// 16. ファイルをN分割する
    //自然数Nをコマンドライン引数などの手段で受け取り，入力のファイルを行単位でN分割せよ．同様の処理をsplitコマンドで実現せよ．
-   func Q16() {
+   func Q16(_ input: String, _ splitNum: Int) -> [String] {
+      let lineNum = input.components(separatedBy: .newlines).count - 1
+      let splitLineNum = lineNum / splitNum
+      var retStr: [String] = Array()
+      var splitSentense = input
       
+      for _ in 1 ... splitNum {
+         let lineCount = splitSentense.components(separatedBy: .newlines).count - 1
+         if  lineCount < splitLineNum {
+            retStr.append(Q14(splitSentense, lineNum: lineCount)!)
+         }
+         retStr.append(Q14(splitSentense, lineNum: splitLineNum)!)
+         splitSentense = Q15(splitSentense, lineNum: lineCount - splitLineNum)!
+      }
+      
+      return retStr
    }
    
    /// 17. １列目の文字列の異なり
    //1列目の文字列の種類（異なる文字列の集合）を求めよ．確認にはsort, uniqコマンドを用いよ．
-   func Q17() {
-      
+   func Q17(_ input: String) -> Set<String> {
+      return Set(Q12(input, 0).components(separatedBy: .newlines).filter{ $0 != ""})
    }
    
    /// 18. 各行を3コラム目の数値の降順にソート
    //各行を3コラム目の数値の逆順で整列せよ（注意: 各行の内容は変更せずに並び替えよ）．
    //確認にはsortコマンドを用いよ（この問題はコマンドで実行した時の結果と合わなくてもよい）．
-   func Q18() {
+   func Q18(_ input: String) -> String {
+      let line = input.components(separatedBy: .newlines).filter{ $0 != "" }
       
+//      var b = line.map {
+//         $0.components(separatedBy: "\t")[2].sorted{ Double($0) < Double($1)}
+//      }
+      
+      //print(b)
+      
+      return "2"
    }
    
    /// 19. 各行の1コラム目の文字列の出現頻度を求め，出現頻度の高い順に並べる
    //各行の1列目の文字列の出現頻度を求め，その高い順に並べて表示せよ．確認にはcut, uniq, sortコマンドを用いよ．
-   func Q19() {
-      
+   func Q19(_ input: String) -> [(key: String, value: Int)] {
+      let sorted = Q12(input, 0).components(separatedBy: .newlines).filter{ $0 != ""}.sorted{ $0 < $1}
+      return sorted.reduce([String: Int]()) { dic, posi in
+         var dic = dic
+         //nilなら0で初期化それ以外ならインクリメント
+         dic[posi] = (dic[posi] ?? 0) + 1
+         return dic
+      }.sorted() { $0.value > $1.value }
    }
 
 }

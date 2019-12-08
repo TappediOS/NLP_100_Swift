@@ -27,12 +27,12 @@ class Chapter1Test: XCTestCase {
       XCTAssertEqual(Chapter1().Q3("Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."), [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9])
    }
    
-//   func testQ4() {
-//      XCTAssertEqual(
-//      Chapter1().Q4("Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.", splitPosi: [1, 5, 6, 7, 8, 9, 15, 16, 19]),
-//      ["H": 1, "Ne": 10, "Be": 4, "Al": 13, "B": 5, "O": 8, "Li": 3, "F": 9, "He": 2, "S": 16, "Cl": 17, "K": 19, "Ar": 18, "C": 6, "N": 7, "Mi": 12, "Si": 14, "Ca": 20, "P": 15, "Na": 11])
-//   }
-//
+   func testQ4() {
+      XCTAssertEqual(
+      Chapter1().Q4("Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can.", [1, 5, 6, 7, 8, 9, 15, 16, 19]),
+      ["Cl": 17, "Li": 3, "N": 7, "K": 19, "Mi": 12, "C": 6, "F": 9, "Si": 14, "B": 5, "P": 15, "Ar": 18, "He": 2, "Ne": 10, "O": 8, "Al": 13, "S": 16, "Ca": 20, "Na": 11, "Be": 4, "H": 1])
+   }
+
    func testQ5() {
       
    }

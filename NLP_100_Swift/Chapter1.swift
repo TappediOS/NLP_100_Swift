@@ -47,15 +47,22 @@ struct Chapter1 {
    //という文を単語に分解し，1, 5, 6, 7, 8, 9, 15, 16, 19
    //番目の単語は先頭の1文字，それ以外の単語は先頭に2文字を取り出し，取り出した文字列から単語の位置
    //（先頭から何番目の単語か）への連想配列（辞書型もしくはマップ型）を作成せよ．
-//   func Q4(_ input: String, splitPosi: [Int]) -> [String: Int] {
-//      return input.components(separatedBy: " ").enumerated().map { (i, v) in
-//               splitPosi.contains(i + 1) ? (i, v.prefix(1)) : (i, v.prefix(2))
-//             }.reduce([String: Int]()) { sum, v in
-//               var sum = sum
-//               sum[v.1] = v.0 + 1
-//               return sum
-//             }
-//   }
+   func Q4(_ input: String, _ splitPosi: [Int]) -> [String: Int] {
+      let split = input.components(separatedBy: " ")
+      let enamerat = split.enumerated()
+      
+      let arr = enamerat.map { (first: Int, second: String) in
+         return splitPosi.contains(first + 1) ? (first + 1, second.prefix(1)) : (first + 1, second.prefix(2))
+      }
+      
+      let dictionary = arr.reduce([String: Int]()) { array, posi in
+         var array = array
+         array.updateValue(posi.0, forKey: String(posi.1))
+         return array
+      }
+      
+      return dictionary
+   }
    
    //05. n-gram
    //与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，

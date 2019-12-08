@@ -30,9 +30,7 @@ struct Chapter1 {
    //02. 「パトカー」＋「タクシー」＝「パタトクカシーー」
    //「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．
    func Q2(_ input1: String, _ input2: String) -> String {
-      return zip(input1, input2)
-      .map { String($0) + String($1) }
-      .reduce("", +)
+      return zip(input1, input2).map { String($0) + String($1) }.reduce("", +)
    }
    
    //03. 円周率

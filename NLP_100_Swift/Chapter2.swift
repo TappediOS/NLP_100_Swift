@@ -21,27 +21,39 @@ struct Chapter2 {
    /// 11. タブをスペースに置換
    //タブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
    func Q11(_ input: String) -> String {
-      
+      return input.components(separatedBy: "\t").joined(separator: " ")
    }
    
    /// 12. 1列目をcol1.txtに，2列目をcol2.txtに保存
    //各行の1列目だけを抜き出したものをcol1.txtに，2列目だけを抜き出したものをcol2.txt
    //としてファイルに保存せよ．確認にはcutコマンドを用いよ．
-   func Q12() {
-      
+   func Q12(_ input: String, _ colNum: Int) -> String {
+      let line = input.components(separatedBy: .newlines)
+      return line.map { Line -> String in
+         let col = Line.components(separatedBy: "\t")
+         return col.count > colNum ? col[colNum] : ""
+      }.filter{ $0 != ""}.joined(separator: "\n") + "\n"
    }
    
    /// 13. col1.txtとcol2.txtをマージ
    //12で作ったcol1.txtとcol2.txtを結合し，
    //元のファイルの1列目と2列目をタブ区切りで並べたテキストファイルを作成せよ．確認にはpasteコマンドを用いよ．
-   func Q13() {
-      
+   func Q13(_ input1: String, _ input2: String) -> String {
+      let col1 = input1.components(separatedBy: .newlines)
+      let col2 = input2.components(separatedBy: .newlines)
+      let zips = zip(col1, col2).map{ $0 + "\t" + $1 + "\n"}
+      return zips.filter{ $0 != "\t\n"}.joined()
    }
    
    /// 14. 先頭からN行を出力
    //自然数Nをコマンドライン引数などの手段で受け取り，入力のうち先頭のN行だけを表示せよ．確認にはheadコマンドを用いよ．
-   func Q14() {
+   func Q14(_ input: String, lineNum: Int) -> String? {
+      let line = input.components(separatedBy: .newlines)
+      guard line.count > lineNum else { return nil }
+      var retStr = ""
+      for tmp in 0 ..< lineNum { retStr += line[tmp] + "\n" }
       
+      return retStr
    }
    
    /// 15. 末尾のN行を出力

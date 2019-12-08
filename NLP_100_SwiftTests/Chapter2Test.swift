@@ -14,8 +14,9 @@ import XCTest
 class Chapter2Test: XCTestCase {
    
    let fileName = "hightemp"
+   let bundle = Bundle(for: Chapter2Test.self)
    var contents: String {
-      let path = Bundle(for: Chapter2Test.self).path(forResource: fileName, ofType: "txt")!
+      let path = bundle.path(forResource: fileName, ofType: "txt")!
       return try! String(contentsOfFile: path)
    }
    
@@ -24,19 +25,57 @@ class Chapter2Test: XCTestCase {
    }
    
    func testQ11() {
+      var ans: String {
+         let path = bundle.path(forResource: "hightemp_Tab_To_Space", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
       
+      XCTAssertEqual(Chapter2().Q11(contents), ans)
    }
    
    func testQ12() {
+     var col1: String {
+        let path = bundle.path(forResource: "col1", ofType: "txt")!
+        return try! String(contentsOfFile: path)
+     }
+      
+      var col2: String {
+         let path = bundle.path(forResource: "col2", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
      
+      XCTAssertEqual(Chapter2().Q12(contents, 0), col1)
+      XCTAssertEqual(Chapter2().Q12(contents, 1), col2)
    }
    
    func testQ13() {
-     
+     var col1: String {
+        let path = bundle.path(forResource: "col1", ofType: "txt")!
+        return try! String(contentsOfFile: path)
+     }
+      
+      var col2: String {
+         let path = bundle.path(forResource: "col2", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
+      var col1Andcol2: String {
+         let path = bundle.path(forResource: "col1+col2", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
+      
+      let result = Chapter2().Q13(col1, col2)
+      XCTAssertEqual(result, col1Andcol2)
    }
    
    func testQ14() {
-      
+      var Line5: String {
+         let path = bundle.path(forResource: "hightemp_Line5", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
+      let result = Chapter2().Q14(contents, lineNum: 5)
+      let errResult = Chapter2().Q14(contents, lineNum: 43)
+      XCTAssertEqual(result, Line5)
+      XCTAssertNil(errResult)
    }
 
    func testQ15_1() {

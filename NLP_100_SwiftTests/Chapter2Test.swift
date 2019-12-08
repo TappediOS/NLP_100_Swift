@@ -7,13 +7,20 @@
 //
 
 import Foundation
+import XCTest
 @testable import NLP_100_Swift
 
 
 class Chapter2Test: XCTestCase {
    
+   let fileName = "hightemp"
+   var contents: String {
+      let path = Bundle(for: Chapter2Test.self).path(forResource: fileName, ofType: "txt")!
+      return try! String(contentsOfFile: path)
+   }
+   
    func testQ10() {
-      
+      XCTAssertEqual(Chapter2().Q10(contents), 24)
    }
    
    func testQ11() {

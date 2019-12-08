@@ -14,13 +14,13 @@ struct Chapter2 {
    
    /// 10. 行数のカウント
    //行数をカウントせよ．確認にはwcコマンドを用いよ．
-   func Q10() {
-      
+   func Q10(_ input: String) -> Int {
+      return input.components(separatedBy: .newlines).filter{ $0 != "" }.count
    }
    
    /// 11. タブをスペースに置換
-   タブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
-   func Q11() {
+   //タブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
+   func Q11(_ input: String) -> String {
       
    }
    

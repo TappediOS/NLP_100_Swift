@@ -151,9 +151,7 @@ struct Chapter1 {
    //（例えば"I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."）
    //を与え，その実行結果を確認せよ．
    func Q9(_ input: String) -> String {
-      var sentense = input.components(separatedBy: " ")
-      
-      return sentense.map { Char -> String in
+      return input.components(separatedBy: " ").map { Char -> String in
          var char = Char
          if char.count <= 4 { return char }
          let first = String(char.removeFirst())

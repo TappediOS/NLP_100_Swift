@@ -38,11 +38,22 @@ class Chapter1Test: XCTestCase {
    }
    
    func testQ5_2() {
-      XCTAssertEqual(Chapter1().Q5_2("you have a pen and my bag.", 2), [["y", "o"], ["o", "u"], ["u", " "], [" ", "h"], ["h", "a"], ["a", "v"], ["v", "e"], ["e", " "], [" ", "a"], ["a", " "], [" ", "p"], ["p", "e"], ["e", "n"], ["n", " "], [" ", "a"], ["a", "n"], ["n", "d"], ["d", " "], [" ", "m"], ["m", "y"], ["y", " "], [" ", "b"], ["b", "a"], ["a", "g"], ["g", "."]])
+      XCTAssertEqual(Chapter1().Q5_2("you have a pen and my bag.", 2), [["yo", "u "], ["u ", "ha"], ["ha", "ve"], ["ve", " a"], [" a", " p"], [" p", "en"], ["en", " a"], [" a", "nd"], ["nd", " m"], [" m", "y "], ["y ", "ba"], ["ba", "g."]])
    }
    
-   func testQ6() {
-      XCTAssertEqual(Chapter1().Q5_1("you have a pen and my bag.", 2), [["you", "have"], ["have", "a"], ["a", "pen"], ["pen", "and"], ["and", "my"], ["my", "bag."]])
+   func testQ6_1() {
+      let result = Chapter1().Q6_1("paraparaparadise", "paragraph")
+      
+      
+      XCTAssertEqual(result.0, Set(["ra", "ap", "gr", "pa", "se", "di", "h"]))
+      XCTAssertEqual(result.1, Set([]))
+      XCTAssertEqual(result.2, Set(["di", "se", "pa", "ra"]))
+      
+   }
+   
+   func testQ6_2() {
+      XCTAssertTrue(Chapter1().Q6_2("paraparaparadise", "se"))
+      XCTAssertFalse(Chapter1().Q6_2("paragraph", "se"))
    }
    
    func testQ7() {
@@ -50,7 +61,8 @@ class Chapter1Test: XCTestCase {
    }
    
    func testQ8() {
-      
+      XCTAssertEqual(Chapter1().Q8("This Is An Apple!"), "Tsrh»Ih»Am»Akkovº")
+      XCTAssertEqual(Chapter1().Q8("Tsrh»Ih»Am»Akkovº"), "This Is An Apple!")
    }
    
    func testQ9() {

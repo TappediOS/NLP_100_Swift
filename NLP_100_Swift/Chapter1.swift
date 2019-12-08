@@ -69,7 +69,7 @@ struct Chapter1 {
    //"I am an NLPer"という文から単語bi-gram，文字bi-gramを得よ．
    func Q5_1(_ input: String, _ Ngram: Int) -> [[String]] {
       var retStr: [[String]] = Array()
-      input.components(separatedBy: " ").reduce([String]()) { array, str in
+      _ = input.components(separatedBy: " ").reduce([String]()) { array, str in
          var array = array
          array.append(String(str))
          if array.count == Ngram { retStr.append(array) }
@@ -81,13 +81,13 @@ struct Chapter1 {
    
    func Q5_2(_ input: String, _ Ngram: Int) -> [[String]] {
       var retStr: [[String]] = Array()
-      input.splitInto(1).reduce([String]()) { array, str in
+      _ = input.splitInto(2).reduce([String]()) { array, str in
          var array = array
          array.append(String(str))
          if array.count == Ngram { retStr.append(array) }
          if array.count == Ngram { array.remove(at: 0) }
          return array
-      }      
+      }
       return retStr
    }
    
@@ -95,8 +95,26 @@ struct Chapter1 {
    //"paraparaparadise"と"paragraph"に含まれる文字bi-gramの集合を，それぞれ,
    //XとYとして求め，XとYの和集合，積集合，差集合を求めよ．
    //さらに，'se'というbi-gramがXおよびYに含まれるかどうかを調べよ．
-   func Q6() {
+   func Q6_1(_ input1: String, _ input2: String) -> (Set<String>, Set<String>, Set<String>) {
+      let BeforeX = Q5_2(input1, 2)
+      let BeforeY = Q5_2(input2, 2)
+      var X: [String] = Array()
+      var Y: [String] = Array()
+      _ = BeforeX.map { $0.map { X.append($0)} }
+      _ = BeforeY.map { $0.map { Y.append($0)} }
       
+      let XSet = Set(X)
+      let YSet = Set(X)
+      let Sum = Set(X + Y)
+      let Dif = XSet.subtracting(YSet)
+      let Mul = XSet.intersection(YSet)
+      
+      return (Sum, Dif, Mul)
+   }
+
+   func Q6_2(_ input: String, _ checkWord: String) -> Bool {
+      let strArr = Q5_2(input, 2)
+      return strArr.map { $0.contains(checkWord)}.contains(true)
    }
    
    //07. テンプレートによる文生成
@@ -112,8 +130,18 @@ struct Chapter1 {
    //英小文字ならば(219 - 文字コード)の文字に置換
    //その他の文字はそのまま出力
    //この関数を用い，英語のメッセージを暗号化・復号化せよ．
-   func Q8() {
-         
+   func Q8(_ input: String) -> String {
+      let retStr = input.map { Cipher -> String in
+         let chr = Cipher
+         let lowerString = chr.lowercased()
+         if lowerString == String(chr) {
+            return String(describing: UnicodeScalar(219 - chr.unicodeScalars.first!.value)!)
+         }else{
+            return String(chr)
+         }
+      }.joined()
+
+      return retStr
    }
    
    //09. Typoglycemia

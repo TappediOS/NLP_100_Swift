@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB04239CE18000289E98 /* Chapter2.swift */; };
+		BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB06239CE24F00289E98 /* Chapter2Test.swift */; };
+		BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB09239CE3F300289E98 /* hightemp.txt */; };
 		BFA6236A2397763800001645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA623692397763800001645 /* AppDelegate.swift */; };
 		BFA6236C2397763800001645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6236B2397763800001645 /* ViewController.swift */; };
 		BFA6236E2397763900001645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA6236D2397763900001645 /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF96DB04239CE18000289E98 /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
+		BF96DB06239CE24F00289E98 /* Chapter2Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2Test.swift; sourceTree = "<group>"; };
+		BF96DB09239CE3F300289E98 /* hightemp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
 		BFA623662397763800001645 /* NLP_100_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLP_100_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA623692397763800001645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA6236B2397763800001645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF96DB08239CE39400289E98 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BF96DB09239CE3F300289E98 /* hightemp.txt */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		BFA6235D2397763800001645 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,7 @@
 				BFA623882397764E00001645 /* NoUse */,
 				BFA623872397764C00001645 /* Extension */,
 				BFA623892397768200001645 /* Chapter1.swift */,
+				BF96DB04239CE18000289E98 /* Chapter2.swift */,
 				BFA623722397763900001645 /* Info.plist */,
 				BFA623732397763900001645 /* NLP_100_Swift.entitlements */,
 			);
@@ -92,7 +107,9 @@
 		BFA6237B2397763900001645 /* NLP_100_SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF96DB08239CE39400289E98 /* Resource */,
 				BFA6238B2397769D00001645 /* Chapter1Test.swift */,
+				BF96DB06239CE24F00289E98 /* Chapter2Test.swift */,
 				BFA6237E2397763900001645 /* Info.plist */,
 			);
 			path = NLP_100_SwiftTests;
@@ -207,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA6236C2397763800001645 /* ViewController.swift in Sources */,
+				BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */,
 				BFA6238E239799F900001645 /* ExString.swift in Sources */,
 				BFA6236A2397763800001645 /* AppDelegate.swift in Sources */,
 				BFA6238A2397768200001645 /* Chapter1.swift in Sources */,
@@ -228,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */,
 				BFA6238C2397769D00001645 /* Chapter1Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

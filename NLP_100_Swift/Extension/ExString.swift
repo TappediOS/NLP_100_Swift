@@ -9,13 +9,11 @@
 import Foundation
 
 extension String {
-    //絵文字など(2文字分)も含めた文字数を返します
     var length: Int {
         let string_NS = self as NSString
         return string_NS.length
     }
 
-    //正規表現の検索をします
     func pregMatche(pattern: String, options: NSRegularExpression.Options = []) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
             return false
@@ -24,7 +22,6 @@ extension String {
         return matches.count > 0
     }
 
-    //正規表現の検索結果を利用できます
     func pregMatche(pattern: String, options: NSRegularExpression.Options = [], matches: inout [String]) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
             return false
@@ -40,10 +37,17 @@ extension String {
         return results.count > 0
     }
 
-    //正規表現の置換をします
     func pregReplace(pattern: String, with: String, options: NSRegularExpression.Options = []) -> String {
         let regex = try! NSRegularExpression(pattern: pattern, options: options)
         return regex.stringByReplacingMatches(in: self, options: [], range: NSMakeRange(0, self.length), withTemplate: with)
     }
+   
+   func splitInto(_ length: Int) -> [String] {
+       var str = self
+       for i in 0 ..< (str.count - 1) / max(length, 1) {
+           str.insert(",", at: str.index(str.startIndex, offsetBy: (i + 1) * max(length, 1) + i))
+       }
+       return str.components(separatedBy: ",")
+   }
 }
 

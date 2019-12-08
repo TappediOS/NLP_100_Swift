@@ -33,12 +33,16 @@ class Chapter1Test: XCTestCase {
       ["Cl": 17, "Li": 3, "N": 7, "K": 19, "Mi": 12, "C": 6, "F": 9, "Si": 14, "B": 5, "P": 15, "Ar": 18, "He": 2, "Ne": 10, "O": 8, "Al": 13, "S": 16, "Ca": 20, "Na": 11, "Be": 4, "H": 1])
    }
 
-   func testQ5() {
-      
+   func testQ5_1() {
+      XCTAssertEqual(Chapter1().Q5_1("you have a pen and my bag.", 2), [["you", "have"], ["have", "a"], ["a", "pen"], ["pen", "and"], ["and", "my"], ["my", "bag."]])
+   }
+   
+   func testQ5_2() {
+      XCTAssertEqual(Chapter1().Q5_2("you have a pen and my bag.", 2), [["y", "o"], ["o", "u"], ["u", " "], [" ", "h"], ["h", "a"], ["a", "v"], ["v", "e"], ["e", " "], [" ", "a"], ["a", " "], [" ", "p"], ["p", "e"], ["e", "n"], ["n", " "], [" ", "a"], ["a", "n"], ["n", "d"], ["d", " "], [" ", "m"], ["m", "y"], ["y", " "], [" ", "b"], ["b", "a"], ["a", "g"], ["g", "."]])
    }
    
    func testQ6() {
-      
+      XCTAssertEqual(Chapter1().Q5_1("you have a pen and my bag.", 2), [["you", "have"], ["have", "a"], ["a", "pen"], ["pen", "and"], ["and", "my"], ["my", "bag."]])
    }
    
    func testQ7() {

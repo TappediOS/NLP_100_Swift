@@ -67,8 +67,28 @@ struct Chapter1 {
    //05. n-gram
    //与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，
    //"I am an NLPer"という文から単語bi-gram，文字bi-gramを得よ．
-   func Q5() {
-      
+   func Q5_1(_ input: String, _ Ngram: Int) -> [[String]] {
+      var retStr: [[String]] = Array()
+      input.components(separatedBy: " ").reduce([String]()) { array, str in
+         var array = array
+         array.append(String(str))
+         if array.count == Ngram { retStr.append(array) }
+         if array.count == Ngram { array.remove(at: 0) }
+         return array
+      }
+      return retStr
+   }
+   
+   func Q5_2(_ input: String, _ Ngram: Int) -> [[String]] {
+      var retStr: [[String]] = Array()
+      input.splitInto(1).reduce([String]()) { array, str in
+         var array = array
+         array.append(String(str))
+         if array.count == Ngram { retStr.append(array) }
+         if array.count == Ngram { array.remove(at: 0) }
+         return array
+      }      
+      return retStr
    }
    
    //06. 集合

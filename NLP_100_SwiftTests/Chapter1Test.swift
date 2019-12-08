@@ -66,6 +66,11 @@ class Chapter1Test: XCTestCase {
    }
    
    func testQ9() {
-      
+      let input = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
+      let result = Chapter1().Q9(input)
+      XCTAssertNotEqual(result, input)
+      XCTAssertTrue(result.hasPrefix("I "))
+      XCTAssertTrue(result.hasSuffix(" ."))
+      XCTAssertTrue(result.contains(" what I was "))
    }
 }

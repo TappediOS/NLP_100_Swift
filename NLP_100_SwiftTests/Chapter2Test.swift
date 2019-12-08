@@ -79,7 +79,14 @@ class Chapter2Test: XCTestCase {
    }
 
    func testQ15_1() {
-     
+     var Line5: String {
+        let path = bundle.path(forResource: "hightemp_Line5_Tail", ofType: "txt")!
+        return try! String(contentsOfFile: path)
+     }
+     let result = Chapter2().Q15(contents, lineNum: 5)
+     let errResult = Chapter2().Q14(contents, lineNum: 43)
+     XCTAssertEqual(result, Line5)
+     XCTAssertNil(errResult)
    }
    
    func testQ15_2() {

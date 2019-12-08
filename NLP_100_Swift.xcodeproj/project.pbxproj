@@ -15,6 +15,7 @@
 		BF96DB10239CEBFC00289E98 /* col2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB0F239CEBFC00289E98 /* col2.txt */; };
 		BF96DB12239CEF2E00289E98 /* col1+col2.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB11239CEF2E00289E98 /* col1+col2.txt */; };
 		BF96DB14239CF31900289E98 /* hightemp_Line5.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB13239CF31900289E98 /* hightemp_Line5.txt */; };
+		BF96DB16239CF4C000289E98 /* hightemp_Line5_Tail.txt in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB15239CF4C000289E98 /* hightemp_Line5_Tail.txt */; };
 		BFA6236A2397763800001645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA623692397763800001645 /* AppDelegate.swift */; };
 		BFA6236C2397763800001645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6236B2397763800001645 /* ViewController.swift */; };
 		BFA6236E2397763900001645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA6236D2397763900001645 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		BF96DB0F239CEBFC00289E98 /* col2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = col2.txt; sourceTree = "<group>"; };
 		BF96DB11239CEF2E00289E98 /* col1+col2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "col1+col2.txt"; sourceTree = "<group>"; };
 		BF96DB13239CF31900289E98 /* hightemp_Line5.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp_Line5.txt; sourceTree = "<group>"; };
+		BF96DB15239CF4C000289E98 /* hightemp_Line5_Tail.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp_Line5_Tail.txt; sourceTree = "<group>"; };
 		BFA623662397763800001645 /* NLP_100_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLP_100_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA623692397763800001645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA6236B2397763800001645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				BF96DB0F239CEBFC00289E98 /* col2.txt */,
 				BF96DB11239CEF2E00289E98 /* col1+col2.txt */,
 				BF96DB13239CF31900289E98 /* hightemp_Line5.txt */,
+				BF96DB15239CF4C000289E98 /* hightemp_Line5_Tail.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */,
+				BF96DB16239CF4C000289E98 /* hightemp_Line5_Tail.txt in Sources */,
 				BFA6238C2397769D00001645 /* Chapter1Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

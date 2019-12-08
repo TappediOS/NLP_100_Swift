@@ -58,8 +58,15 @@ struct Chapter2 {
    
    /// 15. 末尾のN行を出力
    //自然数Nをコマンドライン引数などの手段で受け取り，入力のうち末尾のN行だけを表示せよ．確認にはtailコマンドを用いよ．
-   func Q15() {
-      
+   func Q15(_ input: String, lineNum: Int) -> String? {
+      let line = input.components(separatedBy: .newlines)
+      guard line.count > lineNum else { return nil }
+      var retStr = ""
+      for tmp in 0 ..< lineNum {
+         retStr += line[(line.count - 1) - lineNum + tmp] + "\n"
+      }
+        
+      return retStr
    }
    
    /// 16. ファイルをN分割する

@@ -47,9 +47,15 @@ struct Chapter1 {
    //という文を単語に分解し，1, 5, 6, 7, 8, 9, 15, 16, 19
    //番目の単語は先頭の1文字，それ以外の単語は先頭に2文字を取り出し，取り出した文字列から単語の位置
    //（先頭から何番目の単語か）への連想配列（辞書型もしくはマップ型）を作成せよ．
-   func Q4() {
-      
-   }
+//   func Q4(_ input: String, splitPosi: [Int]) -> [String: Int] {
+//      return input.components(separatedBy: " ").enumerated().map { (i, v) in
+//               splitPosi.contains(i + 1) ? (i, v.prefix(1)) : (i, v.prefix(2))
+//             }.reduce([String: Int]()) { sum, v in
+//               var sum = sum
+//               sum[v.1] = v.0 + 1
+//               return sum
+//             }
+//   }
    
    //05. n-gram
    //与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，
@@ -69,8 +75,8 @@ struct Chapter1 {
    //07. テンプレートによる文生成
    //引数x, y, zを受け取り「x時のyはz」という文字列を返す関数を実装せよ．
    //さらに，x=12, y="気温", z=22.4として，実行結果を確認せよ．
-   func Q7() {
-      
+   func Q7(_ x: Int, _ y: Any, _ z: Any) -> String {
+      return "\(x)時の\(y)は\(z)"
    }
    
    //08. 暗号文
@@ -80,7 +86,7 @@ struct Chapter1 {
    //その他の文字はそのまま出力
    //この関数を用い，英語のメッセージを暗号化・復号化せよ．
    func Q8() {
-      
+         
    }
    
    //09. Typoglycemia

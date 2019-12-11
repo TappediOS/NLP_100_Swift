@@ -89,7 +89,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BF96DB08239CE39400289E98 /* Resource */ = {
+		BF96DB08239CE39400289E98 /* ResourceForChapter2 */ = {
 			isa = PBXGroup;
 			children = (
 				BF96DB09239CE3F300289E98 /* hightemp.txt */,
@@ -104,7 +104,7 @@
 				BF96DB1D239CFB3F00289E98 /* split3.txt */,
 				BF96DB21239CFF9C00289E98 /* Set.txt */,
 			);
-			path = Resource;
+			path = ResourceForChapter2;
 			sourceTree = "<group>";
 		};
 		BFA6235D2397763800001645 = {
@@ -142,7 +142,7 @@
 		BFA6237B2397763900001645 /* NLP_100_SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				BF96DB08239CE39400289E98 /* Resource */,
+				BF96DB08239CE39400289E98 /* ResourceForChapter2 */,
 				BFA6238B2397769D00001645 /* Chapter1Test.swift */,
 				BF96DB06239CE24F00289E98 /* Chapter2Test.swift */,
 				BF03700423A0BFCC007406CA /* Chapter3Test.swift */,

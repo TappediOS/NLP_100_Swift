@@ -8,15 +8,24 @@
 
 import Foundation
 
+struct WikiSet: Codable, Equatable {
+    let title: String
+    let text: String
+}
 
 struct Chapter3 {
-   
-   
    
    /// 20. JSONデータの読み込み
    //Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．
    //問題21-29では，ここで抽出した記事本文に対して実行せよ．
-   func Q20() {
+   func Q20(_ input: String) -> WikiSet {
+      let line = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
+      let decoder = JSONDecoder()
+      
+      
+      return line.map{
+         return try! decoder.decode(WikiSet.self, from: $0.data(using: .utf8)!)
+      }.filter{ $0.title == "イギリス" }.first!
       
    }
    

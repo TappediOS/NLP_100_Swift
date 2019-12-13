@@ -32,6 +32,7 @@
 		BFA6238C2397769D00001645 /* Chapter1Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6238B2397769D00001645 /* Chapter1Test.swift */; };
 		BFA6238E239799F900001645 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6238D239799F900001645 /* ExString.swift */; };
 		BFADC63623A35F7300AC6768 /* UKCategory.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63523A35F7300AC6768 /* UKCategory.txt */; };
+		BFADC63823A3687200AC6768 /* UKCatName.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63723A3687200AC6768 /* UKCatName.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BFA6238B2397769D00001645 /* Chapter1Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1Test.swift; sourceTree = "<group>"; };
 		BFA6238D239799F900001645 /* ExString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
 		BFADC63523A35F7300AC6768 /* UKCategory.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKCategory.txt; sourceTree = "<group>"; };
+		BFADC63723A3687200AC6768 /* UKCatName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKCatName.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				BF03700723A0C257007406CA /* jawiki-country.json */,
 				BF03700923A0C715007406CA /* JsonUK.json */,
 				BFADC63523A35F7300AC6768 /* UKCategory.txt */,
+				BFADC63723A3687200AC6768 /* UKCatName.txt */,
 			);
 			path = ResourceForChapter3;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				BF96DB14239CF31900289E98 /* hightemp_Line5.txt in Resources */,
 				BF96DB18239CF5B700289E98 /* hightemp_Line5_tails.txt in Resources */,
 				BF96DB0C239CE87000289E98 /* hightemp_Tab_To_Space.txt in Resources */,
+				BFADC63823A3687200AC6768 /* UKCatName.txt in Resources */,
 				BF96DB0E239CEBF300289E98 /* col1.txt in Resources */,
 				BF96DB1C239CFB3600289E98 /* split2.txt in Resources */,
 				BF96DB10239CEBFC00289E98 /* col2.txt in Resources */,

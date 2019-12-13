@@ -35,14 +35,23 @@ struct Chapter3 {
    
    /// 22. カテゴリ名の抽出
    //記事のカテゴリ名を（行単位ではなく名前で）抽出せよ．
-   func Q22() {
-      
+   func Q22(_ input: String) -> String {
+      let wikiUK = Q20(input)
+      let Category = wikiUK.text.components(separatedBy: .newlines).filter{ $0.contains("Category") }
+      let nonCat = Category.map { $0.pregReplace(pattern: "\\[\\[Category:", with: "")}
+   
+      return nonCat.map{$0.pregReplace(pattern: "[\\|[a\\p{Hiragana}]*]*\\]\\]", with: "") }.joined(separator: "\n") + "\n"
    }
    
    /// 23. セクション構造
    //記事中に含まれるセクション名とそのレベル（例えば"== セクション名 =="なら1）を表示せよ．
-   func Q23() {
+   func Q23(_ input: String) -> (String, Int) {
+      let wikiUK = Q20(input)
+      sectionLine = wikiUK.text.components(separatedBy: .newlines).filter{ $0.contains("==") }
       
+      
+      
+      return ("a", 2)
    }
    
    /// 24. ファイル参照の抽出

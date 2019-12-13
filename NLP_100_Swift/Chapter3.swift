@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct WikiSet: Codable, Equatable {
+struct WikiSet: Codable {
     let title: String
     let text: String
 }
@@ -20,13 +20,10 @@ struct Chapter3 {
    //問題21-29では，ここで抽出した記事本文に対して実行せよ．
    func Q20(_ input: String) -> WikiSet {
       let line = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
-      let decoder = JSONDecoder()
-      
-      
+            
       return line.map{
-         return try! decoder.decode(WikiSet.self, from: $0.data(using: .utf8)!)
+         return try! JSONDecoder().decode(WikiSet.self, from: $0.data(using: .utf8)!)
       }.filter{ $0.title == "イギリス" }.first!
-      
    }
    
    /// 21. カテゴリ名を含む行を抽出

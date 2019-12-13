@@ -28,8 +28,9 @@ struct Chapter3 {
    
    /// 21. カテゴリ名を含む行を抽出
    //記事中でカテゴリ名を宣言している行を抽出せよ．
-   func Q21() {
-      
+   func Q21(_ input: String) -> String {
+      let wikiUK = Q20(input)
+      return wikiUK.text.components(separatedBy: .newlines).filter { $0.contains("Category") }.joined(separator: "\n") + "\n"
    }
    
    /// 22. カテゴリ名の抽出

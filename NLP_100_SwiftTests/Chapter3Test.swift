@@ -11,9 +11,7 @@ import XCTest
 @testable import NLP_100_Swift
 
 class Chapter3Test: XCTestCase {
-   
 
-   
    let fileName = "jawiki-country"
    let bundle = Bundle(for: Chapter3Test.self)
    
@@ -56,7 +54,21 @@ class Chapter3Test: XCTestCase {
    }
    
    func testQ23() {
+      var NameLevel: String {
+         let path = bundle.path(forResource: "UKNameAndLevel", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
+      let exp = NameLevel.components(separatedBy: .newlines).filter{!$0.isEmpty}.map { line -> (secName:String, secLevel:Int) in
+         print(line)
+         let line = line.components(separatedBy: ",")
+         return (line[0], Int(line[1]) ?? 0)
+      }
       let result = Chapter3().Q23(contents)
+      
+      _ = zip(result, exp).map {
+         XCTAssertEqual($0.secName, $1.secName)
+         XCTAssertEqual($0.secLevel, $1.secLevel)
+      }
    }
    
    func testQ24() {

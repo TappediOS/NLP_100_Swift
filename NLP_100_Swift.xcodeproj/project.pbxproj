@@ -33,6 +33,7 @@
 		BFA6238E239799F900001645 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6238D239799F900001645 /* ExString.swift */; };
 		BFADC63623A35F7300AC6768 /* UKCategory.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63523A35F7300AC6768 /* UKCategory.txt */; };
 		BFADC63823A3687200AC6768 /* UKCatName.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63723A3687200AC6768 /* UKCatName.txt */; };
+		BFADC63C23A370DC00AC6768 /* UKNameAndLevel.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63B23A370DC00AC6768 /* UKNameAndLevel.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		BFA6238D239799F900001645 /* ExString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
 		BFADC63523A35F7300AC6768 /* UKCategory.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKCategory.txt; sourceTree = "<group>"; };
 		BFADC63723A3687200AC6768 /* UKCatName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKCatName.txt; sourceTree = "<group>"; };
+		BFADC63B23A370DC00AC6768 /* UKNameAndLevel.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKNameAndLevel.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				BF03700923A0C715007406CA /* JsonUK.json */,
 				BFADC63523A35F7300AC6768 /* UKCategory.txt */,
 				BFADC63723A3687200AC6768 /* UKCatName.txt */,
+				BFADC63B23A370DC00AC6768 /* UKNameAndLevel.txt */,
 			);
 			path = ResourceForChapter3;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				BF03700823A0C257007406CA /* jawiki-country.json in Resources */,
 				BF96DB1A239CFB2B00289E98 /* split1.txt in Resources */,
 				BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */,
+				BFADC63C23A370DC00AC6768 /* UKNameAndLevel.txt in Resources */,
 				BF96DB12239CEF2E00289E98 /* col1+col2.txt in Resources */,
 				BF03700A23A0C715007406CA /* JsonUK.json in Resources */,
 				BF96DB1E239CFB3F00289E98 /* split3.txt in Resources */,

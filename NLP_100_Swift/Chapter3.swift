@@ -45,13 +45,13 @@ struct Chapter3 {
    
    /// 23. セクション構造
    //記事中に含まれるセクション名とそのレベル（例えば"== セクション名 =="なら1）を表示せよ．
-   func Q23(_ input: String) -> (String, Int) {
+   func Q23(_ input: String) -> [(secName: String, secLevel: Int)] {
       let wikiUK = Q20(input)
-      sectionLine = wikiUK.text.components(separatedBy: .newlines).filter{ $0.contains("==") }
+      let sectionLine = wikiUK.text.components(separatedBy: .newlines).filter{ $0.contains("==") }
+      let sectionName = sectionLine.map { $0.pregReplace(pattern: "[=]*", with: "")}
+      let sectionLevels = sectionLine.map { $0.components(separatedBy: "=")}.map{ ($0.count - 1) / 2 }
       
-      
-      
-      return ("a", 2)
+      return zip(sectionName, sectionLevels).map{ ($0, $1) }
    }
    
    /// 24. ファイル参照の抽出

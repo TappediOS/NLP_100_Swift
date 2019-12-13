@@ -56,7 +56,8 @@ struct Chapter3 {
    
    /// 24. ファイル参照の抽出
    //記事から参照されているメディアファイルをすべて抜き出せ．
-   func Q24() {
+   func Q24(_ input: String) -> String {
+      let wikiUK = Q20(input)
       
    }
    

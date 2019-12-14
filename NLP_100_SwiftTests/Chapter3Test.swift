@@ -81,8 +81,10 @@ class Chapter3Test: XCTestCase {
       XCTAssertEqual(result, UKFile)
    }
    
+   //比較できないから自分で確認
    func testQ25() {
-      
+      let result = Chapter3().Q25(contents)
+      //print(result)
    }
    
    func testQ26() {

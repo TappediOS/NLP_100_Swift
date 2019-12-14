@@ -67,8 +67,17 @@ struct Chapter3 {
    
    /// 25. テンプレートの抽出
    //記事中に含まれる「基礎情報」テンプレートのフィールド名と値を抽出し，辞書オブジェクトとして格納せよ．
-   func Q25() {
+   func Q25(_ input: String) -> [String: String] {
+      let wikiUK = Q20(input).text.components(separatedBy: .newlines)
+         .filter{ $0.pregMatche(pattern: "^\\|") }.filter{ $0.contains(" = ") }
+         .map { String($0.dropFirst()) }
+         .map { $0.components(separatedBy: " = ")}
       
+      return wikiUK.reduce([String: String]()) { dic, arr in
+         var dic = dic
+         dic.updateValue(arr[1], forKey: arr[0])
+         return dic
+      }
    }
    
    /// 26. 強調マークアップの除去

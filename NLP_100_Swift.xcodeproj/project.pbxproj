@@ -34,6 +34,7 @@
 		BFADC63623A35F7300AC6768 /* UKCategory.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63523A35F7300AC6768 /* UKCategory.txt */; };
 		BFADC63823A3687200AC6768 /* UKCatName.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63723A3687200AC6768 /* UKCatName.txt */; };
 		BFADC63C23A370DC00AC6768 /* UKNameAndLevel.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC63B23A370DC00AC6768 /* UKNameAndLevel.txt */; };
+		BFADC64423A4E98B00AC6768 /* UKFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = BFADC64323A4E98B00AC6768 /* UKFile.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		BFADC63523A35F7300AC6768 /* UKCategory.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKCategory.txt; sourceTree = "<group>"; };
 		BFADC63723A3687200AC6768 /* UKCatName.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKCatName.txt; sourceTree = "<group>"; };
 		BFADC63B23A370DC00AC6768 /* UKNameAndLevel.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKNameAndLevel.txt; sourceTree = "<group>"; };
+		BFADC64323A4E98B00AC6768 /* UKFile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UKFile.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				BFADC63523A35F7300AC6768 /* UKCategory.txt */,
 				BFADC63723A3687200AC6768 /* UKCatName.txt */,
 				BFADC63B23A370DC00AC6768 /* UKNameAndLevel.txt */,
+				BFADC64323A4E98B00AC6768 /* UKFile.txt */,
 			);
 			path = ResourceForChapter3;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFADC64423A4E98B00AC6768 /* UKFile.txt in Resources */,
 				BF96DB14239CF31900289E98 /* hightemp_Line5.txt in Resources */,
 				BF96DB18239CF5B700289E98 /* hightemp_Line5_tails.txt in Resources */,
 				BF96DB0C239CE87000289E98 /* hightemp_Tab_To_Space.txt in Resources */,

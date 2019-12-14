@@ -57,8 +57,12 @@ struct Chapter3 {
    /// 24. ファイル参照の抽出
    //記事から参照されているメディアファイルをすべて抜き出せ．
    func Q24(_ input: String) -> String {
-      let wikiUK = Q20(input)
-      
+      let wikiUK = Q20(input).text.components(separatedBy: .newlines).filter{ $0.pregMatche(pattern: "(File|ファイル):") }
+      var pattern = "[\\[\\[]*(?:(File|ファイル):)"
+      let nonHead = wikiUK.map{ $0.pregReplace(pattern: pattern, with: "")}
+      let escape = "|\\*|\\+|\\.|\\{|\\}|\\(|\\)|\\[|\\]|\\$|\\-|\\||\\/|<|>|+|:"
+      pattern = "(\\||#)[.|\\a|\\w|\\s|・|\\{Hiragana}|\\{Katakana}|。|、| |-" + escape + "]*"
+      return nonHead.map { $0.pregReplace(pattern: pattern, with: "")}.joined(separator: "\n") + "\n"
    }
    
    /// 25. テンプレートの抽出

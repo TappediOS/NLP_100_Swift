@@ -72,7 +72,13 @@ class Chapter3Test: XCTestCase {
    }
    
    func testQ24() {
-      
+      var UKFile: String {
+         let path = bundle.path(forResource: "UKFile", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
+      let result = Chapter3().Q24(contents)
+
+      XCTAssertEqual(result, UKFile)
    }
    
    func testQ25() {

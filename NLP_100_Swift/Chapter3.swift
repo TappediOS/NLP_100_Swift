@@ -19,11 +19,9 @@ struct Chapter3 {
    //Wikipedia記事のJSONファイルを読み込み，「イギリス」に関する記事本文を表示せよ．
    //問題21-29では，ここで抽出した記事本文に対して実行せよ．
    func Q20(_ input: String) -> WikiSet {
-      let line = input.components(separatedBy: .newlines).filter { !$0.isEmpty }
-            
-      return line.map{
-         return try! JSONDecoder().decode(WikiSet.self, from: $0.data(using: .utf8)!)
-      }.filter{ $0.title == "イギリス" }.first!
+      return input.components(separatedBy: .newlines).filter{ !$0.isEmpty }
+         .map{ return try! JSONDecoder().decode(WikiSet.self, from: $0.data(using: .utf8)!) }
+         .filter{ $0.title == "イギリス" }.first!
    }
    
    /// 21. カテゴリ名を含む行を抽出
@@ -39,7 +37,6 @@ struct Chapter3 {
       let wikiUK = Q20(input)
       let Category = wikiUK.text.components(separatedBy: .newlines).filter{ $0.contains("Category") }
       let nonCat = Category.map { $0.pregReplace(pattern: "\\[\\[Category:", with: "")}
-   
       return nonCat.map{$0.pregReplace(pattern: "[\\|[a\\p{Hiragana}]*]*\\]\\]", with: "") }.joined(separator: "\n") + "\n"
    }
    
@@ -50,7 +47,6 @@ struct Chapter3 {
       let sectionLine = wikiUK.text.components(separatedBy: .newlines).filter{ $0.contains("==") }
       let sectionName = sectionLine.map { $0.pregReplace(pattern: "[=]*", with: "")}
       let sectionLevels = sectionLine.map { $0.components(separatedBy: "=")}.map{ ($0.count - 1) / 2 }
-      
       return zip(sectionName, sectionLevels).map{ ($0, $1) }
    }
    

@@ -59,7 +59,6 @@ class Chapter3Test: XCTestCase {
          return try! String(contentsOfFile: path)
       }
       let exp = NameLevel.components(separatedBy: .newlines).filter{!$0.isEmpty}.map { line -> (secName:String, secLevel:Int) in
-         print(line)
          let line = line.components(separatedBy: ",")
          return (line[0], Int(line[1]) ?? 0)
       }

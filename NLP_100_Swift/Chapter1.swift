@@ -46,20 +46,14 @@ struct Chapter1 {
    //番目の単語は先頭の1文字，それ以外の単語は先頭に2文字を取り出し，取り出した文字列から単語の位置
    //（先頭から何番目の単語か）への連想配列（辞書型もしくはマップ型）を作成せよ．
    func Q4(_ input: String, _ splitPosi: [Int]) -> [String: Int] {
-      let split = input.components(separatedBy: " ")
-      let enamerat = split.enumerated()
-      
-      let arr = enamerat.map { (first: Int, second: String) in
-         return splitPosi.contains(first + 1) ? (first + 1, second.prefix(1)) : (first + 1, second.prefix(2))
-      }
-      
-      let dictionary = arr.reduce([String: Int]()) { array, posi in
-         var array = array
-         array.updateValue(posi.0, forKey: String(posi.1))
-         return array
-      }
-      
-      return dictionary
+      return input.components(separatedBy: " ").enumerated()
+         .map { (first: Int, second: String) in
+            return splitPosi.contains(first + 1) ? (first + 1, second.prefix(1)) : (first + 1, second.prefix(2))
+         }.reduce([String: Int]()) { dic, arr in
+            var dic = dic
+            dic.updateValue(arr.0, forKey: String(arr.1))
+            return dic
+         }
    }
    
    //05. n-gram
@@ -129,21 +123,15 @@ struct Chapter1 {
    //その他の文字はそのまま出力
    //この関数を用い，英語のメッセージを暗号化・復号化せよ．
    func Q8(_ input: String) -> String {
-      let retStr = input.map { Cipher -> String in
+      return input.map { Cipher -> String in
          let chr = Cipher
          let lowerString = chr.lowercased()
-         if lowerString == String(chr) {
-            return String(describing: UnicodeScalar(219 - chr.unicodeScalars.first!.value)!)
-         }else{
-            return String(chr)
-         }
+         if lowerString != String(chr) { return String(chr) }
+         return String(describing: UnicodeScalar(219 - chr.unicodeScalars.first!.value)!)
       }.joined()
-
-      return retStr
    }
    
    //09. Typoglycemia
-
    //スペースで区切られた単語列に対して，各単語の先頭と末尾の文字は残し，それ以外の文字の順序をランダムに並び替えるプログラムを作成せよ．
    //ただし，長さが４以下の単語は並び替えないこととする．適当な英語の文
    //（例えば"I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."）
@@ -157,7 +145,5 @@ struct Chapter1 {
          let shuffled = String(char.shuffled())
          return (first + shuffled + last)
       }.joined(separator: " ")
-      
    }
-   
 }

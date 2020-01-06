@@ -11,6 +11,10 @@
 		BF03700523A0BFCC007406CA /* Chapter3Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03700423A0BFCC007406CA /* Chapter3Test.swift */; };
 		BF03700823A0C257007406CA /* jawiki-country.json in Resources */ = {isa = PBXBuildFile; fileRef = BF03700723A0C257007406CA /* jawiki-country.json */; };
 		BF03700A23A0C715007406CA /* JsonUK.json in Resources */ = {isa = PBXBuildFile; fileRef = BF03700923A0C715007406CA /* JsonUK.json */; };
+		BF20C4EE23BCD6A700E28508 /* neko.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF20C4ED23BCD6A700E28508 /* neko.txt */; };
+		BF20C4F023BCD95600E28508 /* Chapter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20C4EF23BCD95600E28508 /* Chapter4.swift */; };
+		BF20C4FA23BCDAE600E28508 /* Chapter4Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20C4F923BCDAE600E28508 /* Chapter4Test.swift */; };
+		BF20C4FE23BCE41000E28508 /* neko.txt.mecab in Resources */ = {isa = PBXBuildFile; fileRef = BF20C4FD23BCE41000E28508 /* neko.txt.mecab */; };
 		BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB04239CE18000289E98 /* Chapter2.swift */; };
 		BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB06239CE24F00289E98 /* Chapter2Test.swift */; };
 		BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB09239CE3F300289E98 /* hightemp.txt */; };
@@ -52,6 +56,10 @@
 		BF03700423A0BFCC007406CA /* Chapter3Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3Test.swift; sourceTree = "<group>"; };
 		BF03700723A0C257007406CA /* jawiki-country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jawiki-country.json"; sourceTree = "<group>"; };
 		BF03700923A0C715007406CA /* JsonUK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonUK.json; sourceTree = "<group>"; };
+		BF20C4ED23BCD6A700E28508 /* neko.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neko.txt; sourceTree = "<group>"; };
+		BF20C4EF23BCD95600E28508 /* Chapter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4.swift; sourceTree = "<group>"; };
+		BF20C4F923BCDAE600E28508 /* Chapter4Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4Test.swift; sourceTree = "<group>"; };
+		BF20C4FD23BCE41000E28508 /* neko.txt.mecab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neko.txt.mecab; sourceTree = "<group>"; };
 		BF96DB04239CE18000289E98 /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		BF96DB06239CE24F00289E98 /* Chapter2Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2Test.swift; sourceTree = "<group>"; };
 		BF96DB09239CE3F300289E98 /* hightemp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
@@ -114,6 +122,15 @@
 			path = ResourceForChapter3;
 			sourceTree = "<group>";
 		};
+		BF20C4EC23BCD68100E28508 /* ResorceCapter4 */ = {
+			isa = PBXGroup;
+			children = (
+				BF20C4ED23BCD6A700E28508 /* neko.txt */,
+				BF20C4FD23BCE41000E28508 /* neko.txt.mecab */,
+			);
+			path = ResorceCapter4;
+			sourceTree = "<group>";
+		};
 		BF96DB08239CE39400289E98 /* ResourceForChapter2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +175,7 @@
 				BFA623892397768200001645 /* Chapter1.swift */,
 				BF96DB04239CE18000289E98 /* Chapter2.swift */,
 				BF03700223A0BFB3007406CA /* Chapter3.swift */,
+				BF20C4EF23BCD95600E28508 /* Chapter4.swift */,
 				BFA623722397763900001645 /* Info.plist */,
 				BFA623732397763900001645 /* NLP_100_Swift.entitlements */,
 			);
@@ -169,9 +187,11 @@
 			children = (
 				BF03700623A0C224007406CA /* ResourceForChapter3 */,
 				BF96DB08239CE39400289E98 /* ResourceForChapter2 */,
+				BF20C4EC23BCD68100E28508 /* ResorceCapter4 */,
 				BFA6238B2397769D00001645 /* Chapter1Test.swift */,
 				BF96DB06239CE24F00289E98 /* Chapter2Test.swift */,
 				BF03700423A0BFCC007406CA /* Chapter3Test.swift */,
+				BF20C4F923BCDAE600E28508 /* Chapter4Test.swift */,
 				BFA6237E2397763900001645 /* Info.plist */,
 			);
 			path = NLP_100_SwiftTests;
@@ -293,10 +313,12 @@
 				BFADC63823A3687200AC6768 /* UKCatName.txt in Resources */,
 				BF96DB0E239CEBF300289E98 /* col1.txt in Resources */,
 				BF96DB1C239CFB3600289E98 /* split2.txt in Resources */,
+				BF20C4EE23BCD6A700E28508 /* neko.txt in Resources */,
 				BF96DB10239CEBFC00289E98 /* col2.txt in Resources */,
 				BFADC63623A35F7300AC6768 /* UKCategory.txt in Resources */,
 				BF96DB22239CFF9C00289E98 /* Set.txt in Resources */,
 				BF03700823A0C257007406CA /* jawiki-country.json in Resources */,
+				BF20C4FE23BCE41000E28508 /* neko.txt.mecab in Resources */,
 				BF96DB1A239CFB2B00289E98 /* split1.txt in Resources */,
 				BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */,
 				BFADC63C23A370DC00AC6768 /* UKNameAndLevel.txt in Resources */,
@@ -317,6 +339,7 @@
 				BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */,
 				BFA6238E239799F900001645 /* ExString.swift in Sources */,
 				BFA6236A2397763800001645 /* AppDelegate.swift in Sources */,
+				BF20C4F023BCD95600E28508 /* Chapter4.swift in Sources */,
 				BFA6238A2397768200001645 /* Chapter1.swift in Sources */,
 				BF03700323A0BFB3007406CA /* Chapter3.swift in Sources */,
 			);
@@ -327,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */,
+				BF20C4FA23BCDAE600E28508 /* Chapter4Test.swift in Sources */,
 				BF03700523A0BFCC007406CA /* Chapter3Test.swift in Sources */,
 				BFA6238C2397769D00001645 /* Chapter1Test.swift in Sources */,
 			);

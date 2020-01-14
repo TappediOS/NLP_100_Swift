@@ -20,7 +20,7 @@ class Chapter4Test: XCTestCase {
       return try! String(contentsOfFile: path)
    }
    
-   func testQ40() {
+   func testQ30() {
       let result = Chapter4().Q30(nekoMecab)
       
       print(result)

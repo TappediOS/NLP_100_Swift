@@ -12,10 +12,17 @@ import XCTest
 
 
 class Chapter4Test: XCTestCase {
+   let fileName = "nekoMecab"
+   let bundle = Bundle(for: Chapter3Test.self)
 
-
+   var nekoMecab: String {
+      let path = bundle.path(forResource: fileName, ofType: "txt")!
+      return try! String(contentsOfFile: path)
+   }
    
    func testQ40() {
-
+      let result = Chapter4().Q30(nekoMecab)
+      
+      print(result)
    }
 }

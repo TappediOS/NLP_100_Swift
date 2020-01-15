@@ -40,4 +40,14 @@ struct Chapter4 {
          return $0["surface"]!
       }.filter { $0 != ""}
    }
+   
+   //32. 動詞の原形
+   //動詞の原形をすべて抽出せよ．
+   func Q32() -> [String] {
+      let q30 = getResultOfQ30()
+      return q30.map {
+         if $0["pos"] != "動詞" { return ""}
+         return $0["base"]!
+      }.filter { $0 != ""}
+   }
 }

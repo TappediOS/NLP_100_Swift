@@ -50,4 +50,14 @@ struct Chapter4 {
          return $0["base"]!
       }.filter { $0 != ""}
    }
+   
+   //33. サ変名詞
+   //サ変接続の名詞をすべて抽出せ
+   func Q33() -> [String] {
+      let q30 = getResultOfQ30()
+      return q30.map {
+         if $0["pos"] != "名詞" || $0["pos1"] != "サ変接続" { return ""}
+         return $0["surface"]!
+      }.filter { $0 != ""}
+   }
 }

@@ -14,7 +14,7 @@ struct Chapter5 {
    //形態素を表すクラスMorphを実装せよ．このクラスは表層形（surface），基本形（base），品詞（pos），品詞細分類1（pos1）を
    //メンバ変数に持つこととする．さらに，CaboChaの解析結果（neko.txt.cabocha）を読み込み，
    //各文をMorphオブジェクトのリストとして表現し，3文目の形態素列を表示せよ．
-   func Q40(_ input: String) -> [[String: String]] {
+   func Q40(_ input: String) -> Void {
 
    }
    

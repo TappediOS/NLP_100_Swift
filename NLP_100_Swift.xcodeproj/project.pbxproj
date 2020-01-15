@@ -18,6 +18,7 @@
 		BF20C4FE23BCE41000E28508 /* nekoMecab.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF20C4FD23BCE41000E28508 /* nekoMecab.txt */; };
 		BF26984423CECA3900305577 /* nekoBase.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF26984323CECA3900305577 /* nekoBase.txt */; };
 		BF26984623CECC3400305577 /* nekoSaNone.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF26984523CECC3400305577 /* nekoSaNone.txt */; };
+		BF26984823CECE4D00305577 /* nekoNoneNoNone.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF26984723CECE4D00305577 /* nekoNoneNoNone.txt */; };
 		BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB04239CE18000289E98 /* Chapter2.swift */; };
 		BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB06239CE24F00289E98 /* Chapter2Test.swift */; };
 		BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB09239CE3F300289E98 /* hightemp.txt */; };
@@ -66,6 +67,7 @@
 		BF20C4FD23BCE41000E28508 /* nekoMecab.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nekoMecab.txt; sourceTree = "<group>"; };
 		BF26984323CECA3900305577 /* nekoBase.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = nekoBase.txt; sourceTree = "<group>"; };
 		BF26984523CECC3400305577 /* nekoSaNone.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = nekoSaNone.txt; sourceTree = "<group>"; };
+		BF26984723CECE4D00305577 /* nekoNoneNoNone.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = nekoNoneNoNone.txt; sourceTree = "<group>"; };
 		BF96DB04239CE18000289E98 /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		BF96DB06239CE24F00289E98 /* Chapter2Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2Test.swift; sourceTree = "<group>"; };
 		BF96DB09239CE3F300289E98 /* hightemp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				BF0A9ABE23CEC80B00DBE398 /* nekoSurface.txt */,
 				BF26984323CECA3900305577 /* nekoBase.txt */,
 				BF26984523CECC3400305577 /* nekoSaNone.txt */,
+				BF26984723CECE4D00305577 /* nekoNoneNoNone.txt */,
 			);
 			path = ResorceCapter4;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				BF96DB10239CEBFC00289E98 /* col2.txt in Resources */,
 				BFADC63623A35F7300AC6768 /* UKCategory.txt in Resources */,
 				BF96DB22239CFF9C00289E98 /* Set.txt in Resources */,
+				BF26984823CECE4D00305577 /* nekoNoneNoNone.txt in Resources */,
 				BF03700823A0C257007406CA /* jawiki-country.json in Resources */,
 				BF20C4FE23BCE41000E28508 /* nekoMecab.txt in Resources */,
 				BF96DB1A239CFB2B00289E98 /* split1.txt in Resources */,

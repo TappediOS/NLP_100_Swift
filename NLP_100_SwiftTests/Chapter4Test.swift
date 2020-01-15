@@ -62,4 +62,15 @@ class Chapter4Test: XCTestCase {
       let result = Chapter4().Q33()
       XCTAssertEqual(exp, result)
    }
+   
+   func testQ34() {
+      var nekoNoneNoNone: String {
+         let path = bundle.path(forResource: "nekoNoneNoNone", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
+      
+      let exp = nekoNoneNoNone.components(separatedBy: .newlines).filter { $0 != "" }
+      let result = Chapter4().Q34()
+      XCTAssertEqual(exp, result)
+   }
 }

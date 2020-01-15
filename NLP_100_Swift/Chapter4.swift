@@ -60,4 +60,17 @@ struct Chapter4 {
          return $0["surface"]!
       }.filter { $0 != ""}
    }
+   
+   //34. 「AのB」
+   //2つの名詞が「の」で連結されている名詞句を抽出せよ．
+   func Q34() -> [String] {
+      let q30 = getResultOfQ30()
+      var result: [String] = []
+      for tmp in 0 ... q30.count - 1 {
+         if q30[tmp]["surface"] != "の" { continue }
+         if q30[tmp - 1]["pos"] != "名詞" || q30[tmp + 1]["pos"] != "名詞" { continue }
+         result.append(q30[tmp - 1]["surface"]! + q30[tmp]["surface"]! + q30[tmp + 1]["surface"]!)
+      }
+      return result
+   }
 }

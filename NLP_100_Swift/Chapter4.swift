@@ -126,7 +126,7 @@ struct Chapter4 {
    //39. Zipfの法則
    //単語の出現頻度順位を横軸，その出現頻度を縦軸として，両対数グラフをプロットせよ．
    func Q39() -> [(key: String, value: Int)] {
-     let resultOfQ36 = UserDefaults.standard.value(forKey: "resultOfQ36") as! [String: Int]
+      let resultOfQ36 = UserDefaults.standard.value(forKey: "resultOfQ36") as! [String: Int]
       return resultOfQ36.sorted{ $0.value > $1.value }
    }
 }

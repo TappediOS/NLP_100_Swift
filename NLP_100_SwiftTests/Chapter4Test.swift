@@ -84,4 +84,11 @@ class Chapter4Test: XCTestCase {
       let result = Chapter4().Q35()
       XCTAssertEqual(exp, result)
    }
+   
+   func testQ36() {
+      if userDefaults.bool(forKey: "isRegistarResultOfQ36") { return }
+      let result = Chapter4().Q36()
+      userDefaults.set(result, forKey: "resultOfQ36")
+      userDefaults.set(true, forKey: "isRegistarResultOfQ36")
+   }
 }

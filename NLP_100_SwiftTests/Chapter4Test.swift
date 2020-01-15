@@ -91,4 +91,22 @@ class Chapter4Test: XCTestCase {
       userDefaults.set(result, forKey: "resultOfQ36")
       userDefaults.set(true, forKey: "isRegistarResultOfQ36")
    }
+   
+   //グラフの描画はいつかやるよ。
+   //というか，Unitテストでやることではないしね。
+   func testQ37() {
+      _ = Chapter4().Q37()
+   }
+   
+   //グラフの描画はいつかやるよ。
+   //というか，Unitテストでやることではないしね。
+   func testQ38() {
+      _ = Chapter4().Q38()
+   }
+   
+   //グラフの描画はいつかやるよ。
+   //というか，Unitテストでやることではないしね。
+   func testQ39() {
+      _ = Chapter4().Q39()
+   }
 }

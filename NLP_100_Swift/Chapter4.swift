@@ -109,4 +109,25 @@ struct Chapter4 {
          return dic
       }
    }
+   
+   //37. 頻度上位10語
+   //出現頻度が高い10語とその出現頻度をグラフ（例えば棒グラフなど）で表示せよ．
+   func Q37() -> ArraySlice<(key: String, value: Int)> {
+      let resultOfQ36 = UserDefaults.standard.value(forKey: "resultOfQ36") as! [String: Int]
+      return resultOfQ36.sorted{ $0.value > $1.value }[0...9]
+   }
+   
+   //38. ヒストグラム
+   //単語の出現頻度のヒストグラム（横軸に出現頻度，縦軸に出現頻度をとる単語の種類数を棒グラフで表したもの）を描け．
+   func Q38() -> [(key: String, value: Int)] {
+      let resultOfQ36 = UserDefaults.standard.value(forKey: "resultOfQ36") as! [String: Int]
+      return resultOfQ36.sorted{ $0.value > $1.value }
+   }
+   
+   //39. Zipfの法則
+   //単語の出現頻度順位を横軸，その出現頻度を縦軸として，両対数グラフをプロットせよ．
+   func Q39() -> [(key: String, value: Int)] {
+     let resultOfQ36 = UserDefaults.standard.value(forKey: "resultOfQ36") as! [String: Int]
+      return resultOfQ36.sorted{ $0.value > $1.value }
+   }
 }

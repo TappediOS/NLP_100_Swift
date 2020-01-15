@@ -73,4 +73,29 @@ struct Chapter4 {
       }
       return result
    }
+   
+   //35. 名詞の連接
+   //名詞の連接（連続して出現する名詞）を最長一致で抽出せよ．
+   func Q35() -> [String] {
+      let q30 = getResultOfQ30()
+      var result: [String] = []
+      var ContinuingNoneCount = 0
+      var ContinueNone = ""
+      for tmp in 0 ... q30.count - 1 {
+         if q30[tmp]["pos"] != "名詞" && ContinuingNoneCount <= 1 {
+            ContinueNone = ""
+            ContinuingNoneCount = 0
+            continue
+         }
+         if q30[tmp]["pos"] != "名詞" && ContinuingNoneCount >= 2 {
+            result.append(ContinueNone)
+            ContinueNone = ""
+            ContinuingNoneCount = 0
+            continue
+         }
+         ContinuingNoneCount += 1
+         ContinueNone += q30[tmp]["surface"]!
+      }
+      return result
+   }
 }

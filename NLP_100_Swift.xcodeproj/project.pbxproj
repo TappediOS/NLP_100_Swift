@@ -23,6 +23,7 @@
 		BF26984D23CEDF4E00305577 /* nekoCabocha.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF26984C23CEDF4E00305577 /* nekoCabocha.txt */; };
 		BF26984F23CEDFDD00305577 /* Chapter5Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26984E23CEDFDD00305577 /* Chapter5Test.swift */; };
 		BF26985123CEE02C00305577 /* Chapter5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26985023CEE02C00305577 /* Chapter5.swift */; };
+		BF26985423CEE40500305577 /* Morph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF26985323CEE40500305577 /* Morph.swift */; };
 		BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB04239CE18000289E98 /* Chapter2.swift */; };
 		BF96DB07239CE24F00289E98 /* Chapter2Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF96DB06239CE24F00289E98 /* Chapter2Test.swift */; };
 		BF96DB0A239CE3F300289E98 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF96DB09239CE3F300289E98 /* hightemp.txt */; };
@@ -76,6 +77,7 @@
 		BF26984C23CEDF4E00305577 /* nekoCabocha.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = nekoCabocha.txt; sourceTree = "<group>"; };
 		BF26984E23CEDFDD00305577 /* Chapter5Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter5Test.swift; sourceTree = "<group>"; };
 		BF26985023CEE02C00305577 /* Chapter5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter5.swift; sourceTree = "<group>"; };
+		BF26985323CEE40500305577 /* Morph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Morph.swift; sourceTree = "<group>"; };
 		BF96DB04239CE18000289E98 /* Chapter2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		BF96DB06239CE24F00289E98 /* Chapter2Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter2Test.swift; sourceTree = "<group>"; };
 		BF96DB09239CE3F300289E98 /* hightemp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
@@ -160,6 +162,15 @@
 			path = ResorceChapter5;
 			sourceTree = "<group>";
 		};
+		BF26985223CEE3F000305577 /* Chapter5 */ = {
+			isa = PBXGroup;
+			children = (
+				BF26985023CEE02C00305577 /* Chapter5.swift */,
+				BF26985323CEE40500305577 /* Morph.swift */,
+			);
+			path = Chapter5;
+			sourceTree = "<group>";
+		};
 		BF96DB08239CE39400289E98 /* ResourceForChapter2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +216,7 @@
 				BF96DB04239CE18000289E98 /* Chapter2.swift */,
 				BF03700223A0BFB3007406CA /* Chapter3.swift */,
 				BF20C4EF23BCD95600E28508 /* Chapter4.swift */,
-				BF26985023CEE02C00305577 /* Chapter5.swift */,
+				BF26985223CEE3F000305577 /* Chapter5 */,
 				BFA623722397763900001645 /* Info.plist */,
 				BFA623732397763900001645 /* NLP_100_Swift.entitlements */,
 			);
@@ -376,6 +387,7 @@
 				BFA6236C2397763800001645 /* ViewController.swift in Sources */,
 				BF96DB05239CE18000289E98 /* Chapter2.swift in Sources */,
 				BFA6238E239799F900001645 /* ExString.swift in Sources */,
+				BF26985423CEE40500305577 /* Morph.swift in Sources */,
 				BFA6236A2397763800001645 /* AppDelegate.swift in Sources */,
 				BF20C4F023BCD95600E28508 /* Chapter4.swift in Sources */,
 				BF26985123CEE02C00305577 /* Chapter5.swift in Sources */,

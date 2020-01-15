@@ -14,15 +14,30 @@ import XCTest
 class Chapter4Test: XCTestCase {
    let fileName = "nekoMecab"
    let bundle = Bundle(for: Chapter3Test.self)
+   let userDefaults = UserDefaults.standard
 
    var nekoMecab: String {
       let path = bundle.path(forResource: fileName, ofType: "txt")!
       return try! String(contentsOfFile: path)
    }
    
+   
+   
    func testQ30() {
+      if userDefaults.bool(forKey: "isRegistarResultOfQ30") { return }
       let result = Chapter4().Q30(nekoMecab)
+      userDefaults.set(result, forKey: "resultOfQ30")
+      userDefaults.set(true, forKey: "isRegistarResultOfQ30")
+   }
+   
+   func testQ31() {
+      var nekoSerface: String {
+         let path = bundle.path(forResource: "nekoSurface", ofType: "txt")!
+         return try! String(contentsOfFile: path)
+      }
       
-      print(result)
+      let exp = nekoSerface.components(separatedBy: .newlines).filter { $0 != "" }
+      let result = Chapter4().Q31()
+      XCTAssertEqual(exp, result)
    }
 }

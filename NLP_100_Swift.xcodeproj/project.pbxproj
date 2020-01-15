@@ -11,6 +11,7 @@
 		BF03700523A0BFCC007406CA /* Chapter3Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF03700423A0BFCC007406CA /* Chapter3Test.swift */; };
 		BF03700823A0C257007406CA /* jawiki-country.json in Resources */ = {isa = PBXBuildFile; fileRef = BF03700723A0C257007406CA /* jawiki-country.json */; };
 		BF03700A23A0C715007406CA /* JsonUK.json in Resources */ = {isa = PBXBuildFile; fileRef = BF03700923A0C715007406CA /* JsonUK.json */; };
+		BF0A9ABF23CEC80B00DBE398 /* nekoSurface.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9ABE23CEC80B00DBE398 /* nekoSurface.txt */; };
 		BF20C4EE23BCD6A700E28508 /* neko.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF20C4ED23BCD6A700E28508 /* neko.txt */; };
 		BF20C4F023BCD95600E28508 /* Chapter4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20C4EF23BCD95600E28508 /* Chapter4.swift */; };
 		BF20C4FA23BCDAE600E28508 /* Chapter4Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20C4F923BCDAE600E28508 /* Chapter4Test.swift */; };
@@ -56,6 +57,7 @@
 		BF03700423A0BFCC007406CA /* Chapter3Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter3Test.swift; sourceTree = "<group>"; };
 		BF03700723A0C257007406CA /* jawiki-country.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "jawiki-country.json"; sourceTree = "<group>"; };
 		BF03700923A0C715007406CA /* JsonUK.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonUK.json; sourceTree = "<group>"; };
+		BF0A9ABE23CEC80B00DBE398 /* nekoSurface.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = nekoSurface.txt; sourceTree = "<group>"; };
 		BF20C4ED23BCD6A700E28508 /* neko.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neko.txt; sourceTree = "<group>"; };
 		BF20C4EF23BCD95600E28508 /* Chapter4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4.swift; sourceTree = "<group>"; };
 		BF20C4F923BCDAE600E28508 /* Chapter4Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter4Test.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				BF20C4ED23BCD6A700E28508 /* neko.txt */,
 				BF20C4FD23BCE41000E28508 /* nekoMecab.txt */,
+				BF0A9ABE23CEC80B00DBE398 /* nekoSurface.txt */,
 			);
 			path = ResorceCapter4;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				BFADC63823A3687200AC6768 /* UKCatName.txt in Resources */,
 				BF96DB0E239CEBF300289E98 /* col1.txt in Resources */,
 				BF96DB1C239CFB3600289E98 /* split2.txt in Resources */,
+				BF0A9ABF23CEC80B00DBE398 /* nekoSurface.txt in Resources */,
 				BF20C4EE23BCD6A700E28508 /* neko.txt in Resources */,
 				BF96DB10239CEBFC00289E98 /* col2.txt in Resources */,
 				BFADC63623A35F7300AC6768 /* UKCategory.txt in Resources */,

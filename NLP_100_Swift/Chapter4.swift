@@ -20,9 +20,24 @@ struct Chapter4 {
          var dic = dic
          let splitTabLine = Line.components(separatedBy: "\t")
          if splitTabLine.count == 1 { return dic }
+         if dic.count % 2500 == 0 { print(dic.count)}
          let splitConma = splitTabLine[1].components(separatedBy: ",")
          dic.append(["surface": splitTabLine[0], "base": splitConma[6],"pos": splitConma[0], "pos1": splitConma[1]])
          return dic
       }
+   }
+   
+   func getResultOfQ30() -> [[String: String]] {
+      return UserDefaults.standard.value(forKey: "resultOfQ30") as! [[String: String]]
+   }
+   
+   //31. 動詞
+   //動詞の表層形をすべて抽出せよ．
+   func Q31() -> [String] {
+      let q30 = getResultOfQ30()
+      return q30.map {
+         if $0["pos"] != "動詞" { return ""}
+         return $0["surface"]!
+      }.filter { $0 != ""}
    }
 }

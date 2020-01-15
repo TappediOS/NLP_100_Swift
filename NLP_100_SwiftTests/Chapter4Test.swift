@@ -13,7 +13,7 @@ import XCTest
 
 class Chapter4Test: XCTestCase {
    let fileName = "nekoMecab"
-   let bundle = Bundle(for: Chapter3Test.self)
+   let bundle = Bundle(for: Chapter4Test.self)
    let userDefaults = UserDefaults.standard
 
    var nekoMecab: String {

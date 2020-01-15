@@ -14,8 +14,19 @@ struct Chapter5 {
    //形態素を表すクラスMorphを実装せよ．このクラスは表層形（surface），基本形（base），品詞（pos），品詞細分類1（pos1）を
    //メンバ変数に持つこととする．さらに，CaboChaの解析結果（neko.txt.cabocha）を読み込み，
    //各文をMorphオブジェクトのリストとして表現し，3文目の形態素列を表示せよ．
-   func Q40(_ input: String) -> Void {
-
+   func Q40(_ input: String) -> [Morph] {
+      return input.components(separatedBy: .newlines).reduce([Morph]()) { MorArray, Line in
+         var MorArray = MorArray
+         let splitTabLine = Line.components(separatedBy: "\t")
+         if splitTabLine.count == 1 || splitTabLine[0] == "*" {
+            print("return")
+            return MorArray
+         }
+         if MorArray.count % 2500 == 0 { print(MorArray.count)}
+         let splitConma = splitTabLine[1].components(separatedBy: ",")
+         MorArray.append(Morph(surface: splitTabLine[0], base: splitConma[6], pos: splitConma[0], pos1: splitConma[1]))
+         return MorArray
+      }
    }
    
 

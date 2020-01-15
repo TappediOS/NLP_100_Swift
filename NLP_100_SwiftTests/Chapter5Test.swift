@@ -24,7 +24,12 @@ class Chapter5Test: XCTestCase {
    
    
    func testQ40() {
-     
+     //if userDefaults.bool(forKey: "isRegistarResultOfQ30") { return }
+     let result = Chapter5().Q40(nekoCabocha)
+      
+      
+     //userDefaults.set(result, forKey: "resultOfQ30")
+     //userDefaults.set(true, forKey: "isRegistarResultOfQ30")
    }
    
    func testQ41() {

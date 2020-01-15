@@ -20,7 +20,6 @@ struct Chapter4 {
          var dic = dic
          let splitTabLine = Line.components(separatedBy: "\t")
          if splitTabLine.count == 1 { return dic }
-         if dic.count % 2500 == 0 { print(dic.count)}
          let splitConma = splitTabLine[1].components(separatedBy: ",")
          dic.append(["surface": splitTabLine[0], "base": splitConma[6],"pos": splitConma[0], "pos1": splitConma[1]])
          return dic

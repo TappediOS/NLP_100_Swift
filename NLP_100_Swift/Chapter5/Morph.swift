@@ -20,4 +20,11 @@ class Morph {
       self.pos = pos
       self.pos1 = pos1
    }
+   
+   func printInfo() {
+      print("surface = \(surface)")
+      print("base    = \(base)")
+      print("pos     = \(pos)")
+      print("pos1    = \(pos1)")
+   }
 }

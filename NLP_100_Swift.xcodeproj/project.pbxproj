@@ -171,6 +171,38 @@
 			path = Chapter5;
 			sourceTree = "<group>";
 		};
+		BF77126023D827F000EF0D3C /* Chapter4 */ = {
+			isa = PBXGroup;
+			children = (
+				BF20C4EF23BCD95600E28508 /* Chapter4.swift */,
+			);
+			path = Chapter4;
+			sourceTree = "<group>";
+		};
+		BF77126123D827F300EF0D3C /* Chapter3 */ = {
+			isa = PBXGroup;
+			children = (
+				BF03700223A0BFB3007406CA /* Chapter3.swift */,
+			);
+			path = Chapter3;
+			sourceTree = "<group>";
+		};
+		BF77126223D827F500EF0D3C /* Chapter2 */ = {
+			isa = PBXGroup;
+			children = (
+				BF96DB04239CE18000289E98 /* Chapter2.swift */,
+			);
+			path = Chapter2;
+			sourceTree = "<group>";
+		};
+		BF77126323D827F900EF0D3C /* Chapter1 */ = {
+			isa = PBXGroup;
+			children = (
+				BFA623892397768200001645 /* Chapter1.swift */,
+			);
+			path = Chapter1;
+			sourceTree = "<group>";
+		};
 		BF96DB08239CE39400289E98 /* ResourceForChapter2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,10 +244,10 @@
 			children = (
 				BFA623882397764E00001645 /* NoUse */,
 				BFA623872397764C00001645 /* Extension */,
-				BFA623892397768200001645 /* Chapter1.swift */,
-				BF96DB04239CE18000289E98 /* Chapter2.swift */,
-				BF03700223A0BFB3007406CA /* Chapter3.swift */,
-				BF20C4EF23BCD95600E28508 /* Chapter4.swift */,
+				BF77126323D827F900EF0D3C /* Chapter1 */,
+				BF77126223D827F500EF0D3C /* Chapter2 */,
+				BF77126123D827F300EF0D3C /* Chapter3 */,
+				BF77126023D827F000EF0D3C /* Chapter4 */,
 				BF26985223CEE3F000305577 /* Chapter5 */,
 				BFA623722397763900001645 /* Info.plist */,
 				BFA623732397763900001645 /* NLP_100_Swift.entitlements */,

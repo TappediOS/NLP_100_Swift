@@ -27,5 +27,5 @@ class Morph {
       print("pos     = \(pos)")
       print("pos1    = \(pos1)")
    }
-   
+
 }
